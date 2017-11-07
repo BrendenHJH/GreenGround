@@ -1,0 +1,73 @@
+/* reset */
+@font-face{
+        font-family: NanumGothic; 
+            src:url(fonts/NanumGothic.eot); 
+            src:url(fonts/NanumGothic.eot?#iefix) format('embedded-opentype'),
+                url(fonts/NanumGothic.woff) format('woff'),
+                url(fonts/NanumGothic.ttf) format('truetype')
+        }
+html,body{width:100%;height:100%;margin:0;padding:0;overflow-x:hidden}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,h1,h2,h3,h4,h5,h6,input,textarea,select,button,table{font-family:"Trebuchet MS","Helvetica Neue",Helvetica,sans-serif;font-size:12px}
+img,fieldset{border:0}
+img{vertical-align:top}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+.blind,legend{display:block;position:absolute;left:0;top:-9999em;overflow:hidden}
+table{border-collapse:collapse}
+caption{position:absolute;left:0;top:-9999em;overflow:hidden;height:0;width:0;font-size:0;line-height:0}
+hr{display:none}
+a{text-decoration:none}
+a:hover,a:active,a:focus{text-decoration:underline}
+.skip-navigation a{position: absolute; z-index: 999; left:0; top:-999em; display: block;width: 100%;background-color: #00f; color: #fff; font:800 12px/24px verdana,sans-serif; text-align: center}
+.skip-navigation a:focus{top: 0}
+.clearfix{*zoom: 1; text-align:center;}
+.clearfix:after{content: '';display: block; clear: both}
+
+/*style*/
+/* header */
+#header {position: relative; z-index:30;}
+#header .logo{float: left; margin: 25px 0}
+#header .gnb{float: right}
+#header .gnb li.mm{float: left; position: relative;}
+#header .gnb li.mm .mmbtn{display: block; padding: 80px 15px 22px; color: #45494e; font: 700 16px/50px "NanumGothic",sans-serif; text-align: center; text-decoration: none}
+#header .gnb li.mm .mmbtn:hover,
+#header .gnb li.mm.on .mmbtn{color:#00c43b} /*on*/
+#header .gnb li.mm .sub{display: none; position: absolute; left: 0; top: 152px; width: 250px; padding: 10px 0; background-color: #151515;}
+#header .gnb li.mm.on .sub{display: block;}
+#header .gnb li.mm .sub.rt{left: auto; right: 0}
+#header .gnb li.mm .sub li{padding: 0 10px; }
+#header .gnb li.mm .sub li a{display: block; padding-left: 10px; color: #fff; font:400 14px/36px "NanumGothic",sans-serif; text-decoration: none;}
+#header .gnb li.mm .sub li a:hover{background-color: #00c43b}
+
+.logo {background: url(../image/logo.png) 50% 50% no-repeat; height:100px}
+/*slider*/
+.slider {position: relative; overflow: hidden; z-index: 10;}
+.slider .indicator{position: absolute; left: 0; bottom: 26px; width: 100%;text-align: center;}
+.slider .indicator li{display: inline; margin: 0 2px}
+.slider .indicator li a{display: inline-block; width: 12px; height: 12px; border-radius: 50%; background-color: #000; text-indent: -999em}
+.slider .indicator li.active a{background-color: #00c43b}
+.slider .slider-item{}
+.slider .slider-item li{display: none}
+.slider .slider-item li.active{display: block}
+.slider .slider-item li img{width: 100%}
+.slider .slider-btn{}
+.slider .slider-btn li{position: absolute; top: 50%; margin-top: -30px;}
+.slider .slider-btn li.prev{left: 0}
+.slider .slider-btn li.next{right: 0}
+.slider .slider-btn li a{display: block; width: 30px; height: 60px; background-color: #111; color: #fff; font-size: 18px; text-align: center; line-height: 60px;}
+.slider .slider-btn li a span{}
+.slider .slider-btn li a:hover{background-color: #3c3c3c;}
+/* container */
+/* con1-Welcome */
+#con1-Welcome{text-align: center;}
+#con1-Welcome .tle{ margin: 80px 0 25px; font: 500 36px/1.2 "Titan One","Times New Roman",serif; color: #333434;}
+#con1-Welcome .tle .dashed{display: block; margin: 0 auto; padding-top: 25px; width: 300px; border-bottom: 3px dashed #ff8b99;}
+#con1-Welcome .desc{display: block; width: 740px; margin: 0 auto; text-align: center; font: 16px/1.5 "Open Sans",Helvetica,Arial,sans-serif;color: #666;}
+#con1-Welcome dl{float: left; width: 25%; margin-top: 63px;}
+#con1-Welcome dl dt{margin-bottom: 21px; cursor: pointer;}
+#con1-Welcome dl dt span{display: inline-block; width: 109px; height: 109px; margin-bottom: 23px; border-radius: 50%; line-height: 109px; font-size: 50px; border: 1px solid #76a9e7; color: #76a9e7; }
+#con1-Welcome dl:hover dt span{border: 1px solid #76a9e7; background-color: #275b99; color: #fff;}
+#con1-Welcome dl dt strong{display: block; font: 700 22px/1.1em "Open Sans",Helvetica,Arial,sans-serif;}
+#con1-Welcome dl dd{margin-bottom: 85px; padding: 0 10px; text-align: center;	font: 16px/1.5 "Open Sans",Helvetica,Arial,sans-serif; color: #666;}
+
