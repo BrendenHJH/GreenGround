@@ -12,6 +12,7 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,9 +24,9 @@ public class MapController {
 	MapModel mapModel;
 
 	@RequestMapping(value = "/map", method = RequestMethod.GET)
-	public String showMap(String address) {
+	public String showMap(@RequestBody MapModel map) {
 		StringBuilder html = new StringBuilder();
-		String url = "https://openapi.naver.com/v1/map/geocode?query=" + address;
+		String url = "https://openapi.naver.com/v1/map/geocode?query=" + map.getAddress();
 		String clientId = mapModel.getMap_client_id();
 		String clientSecret = mapModel.getMap_secret_id();
 
@@ -49,7 +50,7 @@ public class MapController {
 			e.printStackTrace();
 		}
 		//확인
-		System.out.println(html.toString());
+		System.out.println("junho : " + html.toString());
 		return "redirect:/";
 	}
 }
