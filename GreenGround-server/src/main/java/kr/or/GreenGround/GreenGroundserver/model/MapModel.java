@@ -10,6 +10,8 @@ public class MapModel {
 	@Value("${map_secret_id}")
 	private String map_secret_id;
 	
+	private String Address;
+	
 	public String getMap_client_id() {
 		return map_client_id;
 	}
@@ -22,5 +24,12 @@ public class MapModel {
 	public void setMap_secret_id(String map_secret_id) {
 		this.map_secret_id = map_secret_id;
 	}
+	public String getAddress() {
+		return Address;
+	}
+	public void setAddress(String address) {
+		Address = address;
+	}
+	
 	
 }
